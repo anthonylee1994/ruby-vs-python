@@ -1,4 +1,4 @@
-def create_user(name, role: "member", active: true)
+def create_user(name, role: 'member', active: true)
   {
     name: name,
     role: role,
@@ -6,15 +6,15 @@ def create_user(name, role: "member", active: true)
   }
 end
 
-p create_user("Ada")
-p create_user("Grace", role: "admin")
-p create_user("Linus", active: false)
+p create_user('Ada')
+p create_user('Grace', role: 'admin')
+p create_user('Linus', active: false)
 
-puts "---"
+puts '---'
 
-def send_email(to:, subject:, body: "")
+def send_email(to:, subject:, body: '')
   "To: #{to} | Subject: #{subject} | Body: #{body}"
 end
 
-puts send_email(to: "ada@example.com", subject: "Welcome")
-puts send_email(to: "grace@example.com", subject: "Deploy", body: "Finished")
+puts send_email(to: 'ada@example.com', subject: 'Welcome')
+puts send_email(to: 'grace@example.com', subject: 'Deploy', body: 'Finished')

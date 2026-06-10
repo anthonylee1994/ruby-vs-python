@@ -16,7 +16,7 @@ end
 
 class VipDiscount
   def apply(order)
-    return order.subtotal * 0.85 if order.customer_type == "vip"
+    return order.subtotal * 0.85 if order.customer_type == 'vip'
 
     order.subtotal
   end
@@ -29,7 +29,7 @@ class FlashSaleDiscount
 end
 
 class NoTax
-  def calculate(amount)
+  def calculate(_amount)
     0
   end
 end
@@ -65,15 +65,15 @@ class CsvReceipt
     total = discounted_amount + tax
 
     [
-      "country,customer_type,subtotal,discounted_amount,tax,total",
+      'country,customer_type,subtotal,discounted_amount,tax,total',
       [
         order.country,
         order.customer_type,
-        format("%.2f", order.subtotal),
-        format("%.2f", discounted_amount),
-        format("%.2f", tax),
-        format("%.2f", total)
-      ].join(",")
+        format('%.2f', order.subtotal),
+        format('%.2f', discounted_amount),
+        format('%.2f', tax),
+        format('%.2f', total)
+      ].join(',')
     ].join("\n")
   end
 end
@@ -94,9 +94,9 @@ class Checkout
 end
 
 orders = [
-  Order.new(subtotal: 120, customer_type: "regular", country: "HK"),
-  Order.new(subtotal: 120, customer_type: "vip", country: "US"),
-  Order.new(subtotal: 120, customer_type: "regular", country: "EU")
+  Order.new(subtotal: 120, customer_type: 'regular', country: 'HK'),
+  Order.new(subtotal: 120, customer_type: 'vip', country: 'US'),
+  Order.new(subtotal: 120, customer_type: 'regular', country: 'EU')
 ]
 
 checkouts = [
@@ -119,5 +119,5 @@ checkouts = [
 
 checkouts.zip(orders).each do |checkout, order|
   puts checkout.receipt_for(order)
-  puts "---"
+  puts '---'
 end

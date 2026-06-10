@@ -1,6 +1,6 @@
 user = {
-  name: "Ada",
-  role: "admin",
+  name: 'Ada',
+  role: 'admin',
   active: true
 }
 

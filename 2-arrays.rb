@@ -5,7 +5,7 @@ puts numbers.last
 puts numbers.length
 
 doubled = numbers.map { |number| number * 2 }
-even_numbers = numbers.select { |number| number.even? }
+even_numbers = numbers.select(&:even?)
 sum = numbers.sum
 
 puts doubled.inspect

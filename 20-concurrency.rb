@@ -14,7 +14,7 @@ users = threads.map(&:value)
 
 p users
 
-puts "---"
+puts '---'
 
 def slow_double(number)
   sleep 0.1

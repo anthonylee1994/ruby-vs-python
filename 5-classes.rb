@@ -7,11 +7,11 @@ class User
   end
 
   def admin?
-    role == "admin"
+    role == 'admin'
   end
 end
 
-user = User.new("Ada", "admin")
+user = User.new('Ada', 'admin')
 
 puts user.name
 puts user.role

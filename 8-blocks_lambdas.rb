@@ -1,14 +1,12 @@
-def repeat(times)
-  times.times do |index|
-    yield(index)
-  end
+def repeat(times, &block)
+  times.times(&block)
 end
 
 repeat(3) do |index|
   puts "Ruby block ##{index + 1}"
 end
 
-puts "---"
+puts '---'
 
 def build_multiplier(number)
   lambda do |value|
@@ -22,7 +20,7 @@ triple = build_multiplier(3)
 puts double.call(10)
 puts triple.call(10)
 
-puts "---"
+puts '---'
 
 numbers = [1, 2, 3, 4]
 squares = numbers.map { |number| number * number }

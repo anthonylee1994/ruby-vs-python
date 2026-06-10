@@ -15,14 +15,14 @@ class Settings
 end
 
 settings = Settings.new({
-  host: "localhost",
-  port: 3000
-})
+                          host: 'localhost',
+                          port: 3000
+                        })
 
 puts settings.host
 puts settings.port
 
-puts "---"
+puts '---'
 
 def add_predicate(class_object, field_name)
   class_object.define_method("has_#{field_name}?") do
@@ -41,6 +41,6 @@ end
 
 add_predicate(User, :email)
 
-user = User.new("Ada", "ada@example.com")
+user = User.new('Ada', 'ada@example.com')
 
 puts user.has_email?

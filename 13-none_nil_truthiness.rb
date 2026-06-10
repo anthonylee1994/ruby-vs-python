@@ -1,4 +1,4 @@
-values = [nil, false, true, 0, 1, "", "hello", [], [1]]
+values = [nil, false, true, 0, 1, '', 'hello', [], [1]]
 
 values.each do |value|
   if value
@@ -8,14 +8,14 @@ values.each do |value|
   end
 end
 
-puts "---"
+puts '---'
 
 def display_name(user)
   name = user[:name]
 
-  name || "Guest"
+  name || 'Guest'
 end
 
-puts display_name({ name: "Ada" })
-puts display_name({ name: "" })
+puts display_name({ name: 'Ada' })
+puts display_name({ name: '' })
 puts display_name({})

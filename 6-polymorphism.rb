@@ -20,10 +20,10 @@ notifiers = [
 ]
 
 notifiers.each do |notifier|
-  send_notification(notifier, "Deploy finished")
+  send_notification(notifier, 'Deploy finished')
 end
 
-puts "---"
+puts '---'
 
 class CreditCardPayment
   def pay(amount)
@@ -57,7 +57,7 @@ payment_methods.each do |payment_method|
   checkout(payment_method, 50)
 end
 
-puts "---"
+puts '---'
 
 class BankTransfer
   def transfer(amount)
@@ -71,7 +71,7 @@ def process_payment(payment_obj, amount)
   elsif payment_obj.respond_to?(:transfer)
     puts payment_obj.transfer(amount)
   else
-    puts "Unknown payment method"
+    puts 'Unknown payment method'
   end
 end
 

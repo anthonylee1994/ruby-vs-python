@@ -14,10 +14,10 @@ p doubled_evens
 p labels
 p matrix
 
-puts "---"
+puts '---'
 
-unique_lengths = ["ruby", "python", "rails", "django"].map(&:length).uniq
-lookup = ["ruby", "python", "rails"].to_h { |word| [word, word.length] }
+unique_lengths = %w[ruby python rails django].map(&:length).uniq
+lookup = %w[ruby python rails].to_h { |word| [word, word.length] }
 
 p unique_lengths
 p lookup

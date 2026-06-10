@@ -1,4 +1,4 @@
-path = "tmp-ruby-file.txt"
+path = 'tmp-ruby-file.txt'
 
 File.write(path, "Ada\nGrace\nLinus\n")
 
@@ -8,9 +8,9 @@ uppercased = lines.map(&:upcase)
 p lines
 p uppercased
 
-puts "---"
+puts '---'
 
-File.open(path, "a") do |file|
+File.open(path, 'a') do |file|
   file.write("Matz\n")
 end
 

@@ -18,7 +18,7 @@ log_call(:total)
 
 puts total([10, 20, 30])
 
-puts "---"
+puts '---'
 
 class Retry
   def initialize(attempts:)
@@ -29,12 +29,10 @@ class Retry
     last_error = nil
 
     (1..@attempts).each do |attempt|
-      begin
-        return yield
-      rescue RuntimeError => error
-        last_error = error
-        puts "Attempt #{attempt} failed"
-      end
+      return yield
+    rescue RuntimeError => e
+      last_error = e
+      puts "Attempt #{attempt} failed"
     end
 
     raise last_error
@@ -46,9 +44,9 @@ counter = { count: 0 }
 sometimes_fails = lambda do
   counter[:count] += 1
 
-  raise "Not ready" if counter[:count] < 2
+  raise 'Not ready' if counter[:count] < 2
 
-  "OK"
+  'OK'
 end
 
 puts Retry.new(attempts: 3).run(&sometimes_fails)

@@ -1,7 +1,7 @@
 users = [
-  { name: "Ada", score: 95 },
-  { name: "Grace", score: 82 },
-  { name: "Linus", score: 70 }
+  { name: 'Ada', score: 95 },
+  { name: 'Grace', score: 82 },
+  { name: 'Linus', score: 70 }
 ]
 
 names = users.map { |user| user[:name] }
@@ -12,13 +12,13 @@ p names
 p passed
 puts total_score
 
-puts "---"
+puts '---'
 
 users.each.with_index(1) do |user, index|
   puts "#{index}. #{user[:name]}"
 end
 
-puts "---"
+puts '---'
 
 score_by_name = users.to_h { |user| [user[:name], user[:score]] }
 
