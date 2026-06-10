@@ -107,7 +107,7 @@ Ruby 通常優先追求表達力、自然語感、寫起嚟順手。
 
 ## 18. Metaprogramming
 
-- Python：**getattr**、setattr、decorator、descriptor
+- Python：getattr、setattr、decorator、descriptor
 - Ruby：method_missing、define_method、open class
 - 重點分別：Ruby 文化更接受 metaprogramming，方便寫 DSL，但亦可能令行為收埋咗。
 
