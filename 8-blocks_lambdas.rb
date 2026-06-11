@@ -1,3 +1,4 @@
+# Ruby block 係一等公民，method 可以直接收 &block。
 def repeat(times, &block)
   times.times(&block)
 end
@@ -8,6 +9,7 @@ end
 
 puts '---'
 
+# lambda 可以保存外層 number，之後再 call。
 def build_multiplier(number)
   lambda do |value|
     value * number

@@ -1,3 +1,4 @@
+# Ruby Thread 可以將幾個慢操作同時開始，再用 value 等結果。
 def fetch_user(user_id)
   sleep 0.1
 
@@ -16,6 +17,7 @@ p users
 
 puts '---'
 
+# CPU/IO demo 都一樣：開 worker thread，最後集中收結果。
 def slow_double(number)
   sleep 0.1
 

@@ -1,3 +1,4 @@
+# Python 用 re module 做 regex 抽取、替換同 search。
 import re
 
 
@@ -17,6 +18,7 @@ print(masked)
 
 print("---")
 
+# named group 令 match 結果可以用欄位名攞值。
 match = re.search(r"#(?P<order_id>[A-Z]\d+) costs \$(?P<price>\d+\.\d{2})", text)
 
 if match:

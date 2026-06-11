@@ -1,3 +1,4 @@
+# Python decorator 其實係一個收 function、回傳 wrapper 嘅 function。
 def log_call(function):
     def wrapper(*args, **kwargs):
         print(f"Calling {function.__name__}")
@@ -19,6 +20,7 @@ print(total([10, 20, 30]))
 print("---")
 
 
+# Retry 將「試多幾次」呢個流程包住實際工作。
 class Retry:
     def __init__(self, attempts):
         self.attempts = attempts

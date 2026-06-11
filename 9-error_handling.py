@@ -1,3 +1,4 @@
+# Python 用 try/except/else/finally 分清成功、失敗同收尾動作。
 def parse_age(value):
     try:
         age = int(value)
@@ -16,6 +17,7 @@ print(parse_age("abc"))
 print("---")
 
 
+# 自訂 Exception class 可以令 except 捕捉範圍清楚啲。
 class PaymentError(Exception):
     pass
 

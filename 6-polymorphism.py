@@ -1,3 +1,4 @@
+# Python 都可以 duck typing：只要物件有 notify，就可以照樣傳入去。
 class EmailNotifier:
     def notify(self, message):
         return f"Email: {message}"
@@ -23,6 +24,7 @@ for notifier in notifiers:
 print("---")
 
 
+# checkout 唔需要繼承共同 base class，只需要 payment_method 有 pay。
 class CreditCardPayment:
     def pay(self, amount):
         return f"Paid ${amount} by credit card"
@@ -54,6 +56,7 @@ for payment_method in payment_methods:
 print("---")
 
 
+# hasattr 係 runtime 檢查行為嘅直接寫法。
 class BankTransfer:
     def transfer(self, amount):
         return f"Transferred ${amount} via bank"

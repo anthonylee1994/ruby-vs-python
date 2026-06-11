@@ -1,3 +1,4 @@
+# Ruby 用 rescue/ensure 處理例外；ensure 無論成功失敗都會執行。
 def parse_age(value)
   age = Integer(value)
   "Age: #{age}"
@@ -13,6 +14,7 @@ puts parse_age('abc')
 
 puts '---'
 
+# 自訂 error class 可以令呼叫端 rescue 得更精準。
 class PaymentError < StandardError
 end
 

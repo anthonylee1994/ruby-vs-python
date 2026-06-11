@@ -1,3 +1,4 @@
+# pathlib 將 path 當物件處理，讀寫檔案會幾直觀。
 from pathlib import Path
 
 
@@ -13,6 +14,7 @@ print(uppercased)
 
 print("---")
 
+# with 會自動 close file，適合需要手動 open 嘅情況。
 with path.open("a") as file:
     file.write("Matz\n")
 

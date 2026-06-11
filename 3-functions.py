@@ -1,3 +1,4 @@
+# Python function 通常明確寫 return，讀起嚟會直接啲。
 def greet(name):
     return f"Hello, {name}"
 

@@ -1,3 +1,4 @@
+# Ruby duck typing：物件識得同一個 method，就可以畀同一段 code 使用。
 class EmailNotifier
   def notify(message)
     "Email: #{message}"
@@ -25,6 +26,7 @@ end
 
 puts '---'
 
+# checkout 唔理 payment_method 係邊個 class，只要求佢有 pay。
 class CreditCardPayment
   def pay(amount)
     "Paid $#{amount} by credit card"
@@ -59,6 +61,7 @@ end
 
 puts '---'
 
+# respond_to? 可以喺 runtime 檢查物件支唔支援某個行為。
 class BankTransfer
   def transfer(amount)
     "Transferred $#{amount} via bank"

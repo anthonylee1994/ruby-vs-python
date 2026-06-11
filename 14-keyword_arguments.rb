@@ -1,3 +1,4 @@
+# Ruby keyword argument 可以提供預設值，呼叫時亦好清楚。
 def create_user(name, role: 'member', active: true)
   {
     name: name,
@@ -12,6 +13,7 @@ p create_user('Linus', active: false)
 
 puts '---'
 
+# 全 keyword 參數適合用喺需要清楚標明欄位嘅 method。
 def send_email(to:, subject:, body: '')
   "To: #{to} | Subject: #{subject} | Body: #{body}"
 end

@@ -1,3 +1,4 @@
+# Python asyncio 適合示範 async/await，同時處理多個等待中任務。
 import asyncio
 import time
 from concurrent.futures import ThreadPoolExecutor
@@ -24,6 +25,7 @@ asyncio.run(main())
 print("---")
 
 
+# ThreadPoolExecutor 適合將 blocking function 放入 worker threads。
 def slow_double(number):
     time.sleep(0.1)
 

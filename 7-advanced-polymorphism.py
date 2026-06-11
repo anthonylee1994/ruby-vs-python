@@ -1,3 +1,4 @@
+# 呢個例子將 discount、tax、receipt 拆成可替換策略。
 from dataclasses import dataclass
 
 
@@ -71,6 +72,7 @@ class Checkout:
         self.tax_policy = tax_policy
         self.receipt_renderer = receipt_renderer
 
+    # Checkout 只依賴每個策略有指定 method，唔需要知道實際 class。
     def receipt_for(self, order):
         discounted_amount = self.discount_policy.apply(order)
         tax = self.tax_policy.calculate(discounted_amount)

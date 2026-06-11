@@ -1,3 +1,4 @@
+# Ruby 冇 Python 式 decorator，但可以用 define_singleton_method 包住 method。
 def log_call(method_name)
   original_method = method(method_name)
 
@@ -20,6 +21,7 @@ puts total([10, 20, 30])
 
 puts '---'
 
+# block/yield 好適合寫 retry 呢類 wrapper 流程。
 class Retry
   def initialize(attempts:)
     @attempts = attempts

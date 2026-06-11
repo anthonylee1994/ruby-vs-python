@@ -1,3 +1,4 @@
+# Python 常用 mixin class 加 multiple inheritance 共享行為。
 class TimestampMixin:
     def timestamp(self):
         return "2026-06-10T12:00:00Z"
@@ -25,6 +26,7 @@ print(event.to_json_dict())
 print("---")
 
 
+# super() 可以沿用父 class 行為，再加自己嘅前綴。
 class AdminAuditEvent(AuditEvent):
     def summary(self):
         return f"[ADMIN] {super().summary()}"

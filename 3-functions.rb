@@ -1,3 +1,4 @@
+# Ruby method 最後一行會自動成為回傳值，所以好多時唔使寫 return。
 def greet(name)
   "Hello, #{name}"
 end

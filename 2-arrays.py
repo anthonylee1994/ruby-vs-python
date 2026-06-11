@@ -1,3 +1,4 @@
+# Python list 常用索引、comprehension 同內建 function 處理資料。
 numbers = [1, 2, 3, 4, 5]
 
 print(numbers[0])

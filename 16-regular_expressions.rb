@@ -1,3 +1,4 @@
+# Ruby regex 可以直接配合 scan/gsub/match 做抽取同替換。
 text = 'Order #A123 costs $49.99, order #B456 costs $15.00'
 
 order_ids = text.scan(/#([A-Z]\d+)/).flatten
@@ -14,6 +15,7 @@ puts masked
 
 puts '---'
 
+# named capture 令 match 結果唔使靠 index 猜欄位。
 match = text.match(/#(?<order_id>[A-Z]\d+) costs \$(?<price>\d+\.\d{2})/)
 
 if match

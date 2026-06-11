@@ -1,3 +1,4 @@
+# Python match/case 可以按 dict/list 形狀拆值同加 guard。
 def describe_event(event):
     match event:
         case {"type": "login", "user": user}:
@@ -23,6 +24,7 @@ for event in events:
 print("---")
 
 
+# sequence pattern 可以攞頭兩個值，再用 *rest 收起剩低嘅元素。
 def first_two(values):
     match values:
         case [first, second, *rest]:

@@ -1,3 +1,4 @@
+# Ruby 用 attr_reader 暴露只讀屬性，instance variable 會用 @ 開頭。
 class User
   attr_reader :name, :role
 

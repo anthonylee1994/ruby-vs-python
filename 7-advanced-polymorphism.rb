@@ -1,3 +1,4 @@
+# 呢個例子將 discount、tax、receipt 拆成可替換策略。
 class Order
   attr_reader :subtotal, :customer_type, :country
 
@@ -85,6 +86,7 @@ class Checkout
     @receipt_renderer = receipt_renderer
   end
 
+  # Checkout 只依賴每個策略有指定 method，唔需要知道實際 class。
   def receipt_for(order)
     discounted_amount = @discount_policy.apply(order)
     tax = @tax_policy.calculate(discounted_amount)

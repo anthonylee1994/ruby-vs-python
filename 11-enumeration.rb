@@ -1,3 +1,4 @@
+# Ruby Enumerable 將 map/select/sum/each 呢類資料處理串得好自然。
 users = [
   { name: 'Ada', score: 95 },
   { name: 'Grace', score: 82 },
@@ -14,6 +15,7 @@ puts total_score
 
 puts '---'
 
+# with_index(1) 可以令顯示編號由 1 開始。
 users.each.with_index(1) do |user, index|
   puts "#{index}. #{user[:name]}"
 end

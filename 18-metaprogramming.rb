@@ -1,3 +1,4 @@
+# Ruby metaprogramming 可以喺 runtime 攔截 method 或動態加 method。
 class Settings
   def initialize(values)
     @values = values
@@ -24,6 +25,7 @@ puts settings.port
 
 puts '---'
 
+# define_method 可以根據欄位名即場幫 class 加 predicate method。
 def add_predicate(class_object, field_name)
   class_object.define_method("has_#{field_name}?") do
     !!public_send(field_name)

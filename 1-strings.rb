@@ -1,3 +1,4 @@
+# Ruby string 可以直接插值，常用嚟寫自然啲嘅輸出文字。
 name = 'Ruby'
 
 puts "Hello, #{name}"

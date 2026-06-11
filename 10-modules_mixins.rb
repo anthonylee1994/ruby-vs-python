@@ -1,3 +1,4 @@
+# Ruby module 可以 include 入 class，將共用行為混入去。
 module Timestampable
   def timestamp
     '2026-06-10T12:00:00Z'
@@ -33,6 +34,7 @@ p event.to_json_hash
 
 puts '---'
 
+# 繼承後仍然可以用 super 保留父 class 嘅 summary 行為。
 class AdminAuditEvent < AuditEvent
   def summary
     "[ADMIN] #{super}"

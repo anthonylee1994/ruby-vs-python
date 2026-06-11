@@ -1,3 +1,4 @@
+# Python comprehension、generator expression 同 enumerate 係常見資料處理組合。
 users = [
     {"name": "Ada", "score": 95},
     {"name": "Grace", "score": 82},
@@ -14,6 +15,7 @@ print(total_score)
 
 print("---")
 
+# enumerate(..., start=1) 可以令顯示編號由 1 開始。
 for index, user in enumerate(users, start=1):
     print(f"{index}. {user['name']}")
 

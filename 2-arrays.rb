@@ -1,3 +1,4 @@
+# Ruby array 配合 Enumerable 方法，寫 map/select/sum 會好順手。
 numbers = [1, 2, 3, 4, 5]
 
 puts numbers.first

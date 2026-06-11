@@ -1,3 +1,4 @@
+# Python string 通常用 f-string 做插值，方法名會比較明確。
 name = "Python"
 
 print(f"Hello, {name}")

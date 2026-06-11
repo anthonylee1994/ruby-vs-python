@@ -1,3 +1,4 @@
+# Python metaprogramming 可以用 __getattr__ 或 setattr 做動態行為。
 class Settings:
     def __init__(self, values):
         self.values = values
@@ -20,6 +21,7 @@ print(settings.port)
 print("---")
 
 
+# setattr 可以根據欄位名即場幫 class 加 method。
 def add_predicate(class_object, field_name):
     def predicate(self):
         return bool(getattr(self, field_name))

@@ -1,3 +1,4 @@
+# Ruby hash 好常用 symbol 做 key，例如 :name、:role。
 user = {
   name: 'Ada',
   role: 'admin',

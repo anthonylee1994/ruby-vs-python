@@ -1,3 +1,4 @@
+# Ruby pattern matching 可以按 hash/array 形狀拆值同加 guard。
 def describe_event(event)
   case event
   in { type: 'login', user: user }
@@ -24,6 +25,7 @@ end
 
 puts '---'
 
+# array pattern 可以攞頭兩個值，再用 *rest 收起剩低嘅元素。
 def first_two(values)
   case values
   in [first, second, *rest]

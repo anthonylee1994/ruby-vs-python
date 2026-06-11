@@ -1,3 +1,4 @@
+# Python dict 多數用 string 做 key，攞值時要用相同 key。
 user = {
     "name": "Ada",
     "role": "admin",
